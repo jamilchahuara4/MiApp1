@@ -2,6 +2,7 @@ package com.jamil.miapp1
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,12 +15,15 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        //añadimos una variable nombre button y de tipo Button
+
+        val nombre: EditText = find
+        val miboton: Button = findViewById(R.id.BotonCentral)
+        val mensaje: TextView = findViewById(R.id.BotonCentral)
 
         val button: Button = findViewById(R.id.BotonCentral)
 
         button.setOnClickListener {
-           Toast.makeText(this, "Bravo!! has pulsado el botón", Toast.LENGTH_LONG).show()
+           Toast.makeText(this, "Escribe tu nombre", Toast.LENGTH_LONG).show()
        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
